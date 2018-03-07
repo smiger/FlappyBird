@@ -36,9 +36,6 @@
     <ClCompile Include="..\Classes\MenuScene.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Number.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\OptionLayer.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -81,9 +78,6 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\MenuScene.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Number.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\OptionLayer.h">

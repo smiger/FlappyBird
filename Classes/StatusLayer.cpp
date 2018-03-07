@@ -14,8 +14,6 @@ bool StatusLayer::init(){
     this->bestScore = 0;
     this->currentScore = 0;
 	this->isNewRecord = false;
-	Number::getInstance()->loadNumber(NUMBER_FONT.c_str(), "font_0%02d.png", 48);
-    Number::getInstance()->loadNumber(NUMBER_SCORE.c_str(), "number_score_%02d.png");
 	this->visibleSize = Director::getInstance()->getVisibleSize();
 	this->originPoint = Director::getInstance()->getVisibleOrigin();
 	this->showReadyStatus();
@@ -24,7 +22,7 @@ bool StatusLayer::init(){
 }
 
 void StatusLayer::showReadyStatus() {
-	scoreSprite = (Sprite *)Number::getInstance()->convert(NUMBER_FONT.c_str(), 0);
+	scoreSprite = ui::TextAtlas::create("0", "num.png",30, 44,"0");
 	scoreSprite->setPosition(Point(this->originPoint.x + this->visibleSize.width / 2,this->originPoint.y + this->visibleSize.height *5/6));
 	this->addChild(scoreSprite);
 
@@ -60,10 +58,8 @@ void StatusLayer::onGameStart(){
 }
 
 void StatusLayer::onGamePlaying(int score){
-	this->removeChild(scoreSprite);
-	this->scoreSprite = (Sprite* )Number::getInstance()->convert(NUMBER_FONT.c_str(), score);
-	scoreSprite->setPosition(Point(this->originPoint.x + this->visibleSize.width / 2,this->originPoint.y + this->visibleSize.height *5/6));
-	this->addChild(scoreSprite);
+	auto scorestr = __String::createWithFormat("%d", score)->getCString();
+	scoreSprite->setString(scorestr);
 }
 
 void StatusLayer::onGameEnd(int curScore, int bestScore){
@@ -110,10 +106,10 @@ void StatusLayer::jumpToScorePanel(){
 	this->addChild(scorepanelSprite);
         
 	//display the  best score on the score panel
-	auto bestScoreSprite = (Sprite *)Number::getInstance()->convert(NUMBER_SCORE.c_str(), this->bestScore, Gravity::GRAVITY_RIGHT);
+	auto bestscoreStr = __String::createWithFormat("%d", this->bestScore)->getCString();
+	auto bestScoreSprite = ui::TextAtlas::create(bestscoreStr, "score.png", 20, 20, "0");
 	bestScoreSprite->setAnchorPoint(Point(1, 1));
-	bestScoreSprite->setPosition(scorepanelSprite->getContentSize().width - 28 ,
-		50);
+	bestScoreSprite->setPosition(Vec2(scorepanelSprite->getContentSize().width - 28 ,50));
 	scorepanelSprite->addChild(bestScoreSprite);
     
     
@@ -183,7 +179,8 @@ void StatusLayer::refreshScoreExecutor(float dt){
 	if(this->getChildByTag(CURRENT_SCORE_SPRITE_TAG)){
 		this->removeChildByTag(CURRENT_SCORE_SPRITE_TAG);
 	}
-	scoreSprite = (Sprite *)Number::getInstance()->convert(NUMBER_SCORE.c_str(), this->tmpScore, Gravity::GRAVITY_RIGHT);
+	auto tmpscoreStr = __String::createWithFormat("%d", this->tmpScore)->getCString();
+	auto scoreSprite = ui::TextAtlas::create(tmpscoreStr, "score.png", 20, 20, "0");
 	scoreSprite->setAnchorPoint(Point(1,0));
 	scoreSprite->setPosition(Point(this->originPoint.x + this->visibleSize.width * 3 / 4 + 20.0f, this->originPoint.y + this->visibleSize.height *  1 / 2));
 	scoreSprite->setTag(CURRENT_SCORE_SPRITE_TAG);

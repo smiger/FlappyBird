@@ -3,9 +3,9 @@
 #include "cocos2d.h"
 #include "GameLayer.h"
 #include "GameScene.h"
-#include "Number.h"
 #include "SimpleAudioEngine.h"
 #include <cstdlib>
+#include "ui/CocosGUI.h"
 
 using namespace std;
 using namespace cocos2d;
@@ -62,7 +62,7 @@ private:
 
 	void menuRestartCallback(Object *sender);
 
-	Sprite* scoreSprite;
+	ui::TextAtlas* scoreSprite;
 
 	Sprite* getreadySprite;
 

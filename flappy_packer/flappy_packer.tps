@@ -168,43 +168,12 @@
             <filename>button_resume.png</filename>
             <filename>button_score.png</filename>
             <filename>button_share.png</filename>
-            <filename>font_048.png</filename>
-            <filename>font_049.png</filename>
-            <filename>font_050.png</filename>
-            <filename>font_051.png</filename>
-            <filename>font_052.png</filename>
-            <filename>font_053.png</filename>
-            <filename>font_054.png</filename>
-            <filename>font_055.png</filename>
-            <filename>font_056.png</filename>
-            <filename>font_057.png</filename>
             <filename>land.png</filename>
             <filename>medals_0.png</filename>
             <filename>medals_1.png</filename>
             <filename>medals_2.png</filename>
             <filename>medals_3.png</filename>
             <filename>new.png</filename>
-            <filename>number_context_00.png</filename>
-            <filename>number_context_01.png</filename>
-            <filename>number_context_02.png</filename>
-            <filename>number_context_03.png</filename>
-            <filename>number_context_04.png</filename>
-            <filename>number_context_05.png</filename>
-            <filename>number_context_06.png</filename>
-            <filename>number_context_07.png</filename>
-            <filename>number_context_08.png</filename>
-            <filename>number_context_09.png</filename>
-            <filename>number_context_10.png</filename>
-            <filename>number_score_00.png</filename>
-            <filename>number_score_01.png</filename>
-            <filename>number_score_02.png</filename>
-            <filename>number_score_03.png</filename>
-            <filename>number_score_04.png</filename>
-            <filename>number_score_05.png</filename>
-            <filename>number_score_06.png</filename>
-            <filename>number_score_07.png</filename>
-            <filename>number_score_08.png</filename>
-            <filename>number_score_09.png</filename>
             <filename>pipe_down.png</filename>
             <filename>pipe_up.png</filename>
             <filename>pipe2_down.png</filename>
