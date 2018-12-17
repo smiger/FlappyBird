@@ -2,4 +2,4 @@
 参考OiteBoys在cocos2d-x-3.16引擎重新编写的FlappyBird游戏
 
 
-博客地址：http://www.tengewang.cn/archives/tag/flappybird
+详细介绍：http://www.tengewang.cn/archives/tag/flappybird
